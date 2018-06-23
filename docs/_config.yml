@@ -1,0 +1,7 @@
+theme: jekyll-theme-cayman
+title: "InstaPython by Micha Birklbauer"
+description: "Project Website for InstaPython - A Python Package for using Instagram"
+show_downloads: "true"
+github:
+  zip_url: https://github.com/t0xic-m/instapython/archive/master.zip
+  tar_url: https://github.com/t0xic-m/instapython/archive/master.tar.gz
