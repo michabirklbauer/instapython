@@ -12,7 +12,7 @@ A small python package to access and deal with Instagram data!
 
   Basic utility functions:
 
-  - #### getUserID(user_name)
+  - ```getUserID(user_name)```
     - description: Retrieves user ID given a username
     - parameters: user_name (a valid and existing instagram username, type: string)
     - returns: user_id (the corresponding user ID, type: integer)
