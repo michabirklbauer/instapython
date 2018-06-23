@@ -84,7 +84,7 @@ A small python package to access and deal with Instagram data!
     - ```channel``` (a telegram channel name or ID, type: string)
     - ```api_token``` (telegram bot api token, type: string)
 
-  -  #### instaBot(user_ids, rtime, stime)
+  - #### instaBot(user_ids, rtime, stime)
     - description: A bot that watches instagram profiles and sends notifications to a telegram channel
     - parameters: ```user_ids``` (a list of valid and existing user IDs, type: list of strings/integers)
     - parameters: ```rtime``` (time in seconds that specifies how long the bot should run, if set to 0 it will run forever, type: integer, default: 3480)
