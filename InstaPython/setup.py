@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="InstaPython",
-    version="1.0.0",
+    version="1.0.1",
     author="Micha Birklbauer",
     author_email="micha.birklbauer@gmail.com",
     description="A set of classes and functions to access Instagram",

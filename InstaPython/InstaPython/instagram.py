@@ -58,8 +58,8 @@ class Instagram:
 		url = "https://instagram.com/"+str(user_name)+"/"
 		user_profile = ur.urlopen(url).read()
 		post_page = "https://instagram.com/p/"+str(str(user_profile).split("shortcode")[1].split("\"")[2])
-		post_pic = str(str(user_profile).split("shortcode")[1].split("display_url")[1].split("\"")[2])
-		return [post_page, post_pic]
+		post_media = self.getMedia(post_page)
+		return [post_page] + [post_media]
 
 	def isPrivate(self, instagram_post_url):
 		url = str(link)
@@ -92,12 +92,12 @@ class Instagram:
 			image = tree.xpath('//meta[@property="og:image"]/@content')
 			media_links.append(str(image[0]))
 			if download:
-				ur.urlretrieve(str(image[0]), str(image[0]).split("/")[-1])
+				ur.urlretrieve(str(image[0]), str(image[0]).split("/")[-1].split("?")[0])
 		elif str(json_data["entry_data"]["PostPage"][0]["graphql"]["shortcode_media"]["__typename"]) == "GraphVideo":
 			video = tree.xpath('//meta[@property="og:video:secure_url"]/@content')
 			media_links.append(str(video[0]))
 			if download:
-				ur.urlretrieve(str(video[0]), str(video[0]).split("/")[-1])
+				ur.urlretrieve(str(video[0]), str(video[0]).split("/")[-1].split("?")[0])
 		elif str(json_data["entry_data"]["PostPage"][0]["graphql"]["shortcode_media"]["__typename"]) == "GraphSidecar":
 			prefix = str(json_data["entry_data"]["PostPage"][0]["graphql"]["shortcode_media"]["shortcode"])
 			edges = json_data["entry_data"]["PostPage"][0]["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"]
@@ -106,12 +106,12 @@ class Instagram:
 					url = str(edge["node"]["video_url"])
 					media_links.append(url)
 					if download:
-						ur.urlretrieve(url, prefix+"_"+(url.split("/")[-1]))
+						ur.urlretrieve(url, prefix+"_"+(url.split("/")[-1].split("?")[0]))
 				else:
 					url = str(edge["node"]["display_url"])
 					media_links.append(url)
 					if download:
-						ur.urlretrieve(url, prefix+"_"+(url.split("/")[-1]))
+						ur.urlretrieve(url, prefix+"_"+(url.split("/")[-1].split("?")[0]))
 		else:
 			print("Unrecognized typename!")
 
