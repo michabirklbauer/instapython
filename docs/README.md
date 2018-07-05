@@ -2,6 +2,23 @@
 
 A small python package to access and deal with Instagram data!
 
+## Quick Start
+
+Installation:
+
+```bash
+pip install Release/InstaPython-1.0.2.tar.gz
+```
+
+Import and Usage:
+
+```python
+import InstaPython
+instagram = InstaPython.Instagram()
+instagram.getUserID("katie_kosova")
+262972296
+````
+
 ## Classes and Functions
 
 - ### Instagram
