@@ -123,8 +123,8 @@ instagram.getUserID("katie_kosova")
 ## Download
 
 - Package:
-  - [TAR.GZ](https://github.com/t0xic-m/instapython/raw/master/Release/InstaPython-1.0.0.tar.gz)
-  - [WHL](https://github.com/t0xic-m/instapython/raw/master/Release/InstaPython-1.0.0-py3-none-any.whl)
+  - [TAR.GZ](https://github.com/t0xic-m/instapython/raw/master/Release/InstaPython-1.0.2.tar.gz)
+  - [WHL](https://github.com/t0xic-m/instapython/raw/master/Release/InstaPython-1.0.2-py3-none-any.whl)
 - Repository:
   - [TAR.GZ](https://github.com/t0xic-m/instapython/archive/master.tar.gz)
   - [ZIP](https://github.com/t0xic-m/instapython/archive/master.zip)
