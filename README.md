@@ -154,6 +154,32 @@ instagram.getUserID("katie_kosova")
     - parameters: ```path``` (path to the json-files-directory, type: string, default: current directory)
     - returns: NULL (creates RMD in specified directory)  
 
+## Dependencies
+
+InstaPython depends on the following packages:
+
+```python
+import urllib.request as ur
+import urllib.parse as up
+from lxml import html
+import tkinter as tk
+from tkinter import scrolledtext as st
+from tkinter import filedialog
+import platform
+import webbrowser
+import datetime
+import requests
+import json
+import time
+import sys
+import os
+```
+
+These packages usually have to be installed (not included in the standard installation):
+- lxml
+- tkinter
+- requests
+
 ## License
 
 [MIT License](https://github.com/t0xic-m/instapython/blob/master/LICENSE.md)
