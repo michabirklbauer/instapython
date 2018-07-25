@@ -9,7 +9,7 @@ A small python package to access and deal with Instagram data!
 Installation:
 
 ```bash
-pip install Release/InstaPython-1.0.2.tar.gz
+pip install Release/InstaPython-1.1.0.tar.gz
 ```
 
 Import and Usage:
@@ -28,8 +28,8 @@ Read the ReadMe [here](https://github.com/t0xic-m/instapython/blob/master/README
 ## Download
 
 - Package:
-  - [TAR.GZ](https://github.com/t0xic-m/instapython/raw/master/Release/InstaPython-1.0.2.tar.gz)
-  - [WHL](https://github.com/t0xic-m/instapython/raw/master/Release/InstaPython-1.0.2-py3-none-any.whl)
+  - [TAR.GZ](https://github.com/t0xic-m/instapython/raw/master/Release/InstaPython-1.1.0.tar.gz)
+  - [WHL](https://github.com/t0xic-m/instapython/raw/master/Release/InstaPython-1.1.0-py3-none-any.whl)
 - Repository:
   - [TAR.GZ](https://github.com/t0xic-m/instapython/archive/master.tar.gz)
   - [ZIP](https://github.com/t0xic-m/instapython/archive/master.zip)
