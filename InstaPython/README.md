@@ -2,7 +2,37 @@
 
 A small python package to access and deal with Instagram data!
 
+## Quick Start
+
+Installation:
+
+```bash
+pip install Release/InstaPython-1.1.0.tar.gz
+```
+
+Import and Usage:
+
+```python
+import InstaPython
+instagram = InstaPython.Instagram()
+instagram.getUserID("katie_kosova")
+262972296
+````
+
 ## Classes and Functions
+
+- ### Main Functions:
+
+  These methods are available outside of specific classes:
+
+  - #### name
+    - description: Returns the package name
+    - parameters: none (also no braces!)
+    - returns: package_name (type: string)
+  - #### gui()
+    - description: Initiates a tkinter GUI with nearly all functions provided by this package
+    - parameters: none
+    - returns: NULL
 
 - ### Instagram
 
@@ -24,14 +54,25 @@ A small python package to access and deal with Instagram data!
     - description: Retrieves media count given a user ID
     - parameters: ```user_id``` (a valid and existing instagram user ID, type: string/integer)
     - retunrs: ```media_count``` (the corresponding media count, type: integer)
-  - #### getProfilePic(user_id)
+  - #### getProfilePic(user_id, download = False)
     - description: Retrieves profile picture URL given a user ID
     - parameters: ```user_id``` (a valid and existing instagram user ID, type: string/integer)
+    - parameters: ```download``` (wether or not profile picture should be downloaded, type: boolean, default: False)
     - returns: ```profile_pic_url``` (direct link to the corresponding profile picture, type: string)
-  - #### getNewPost(user_id)
+  - #### getNewPost(user_id, download = False)
     - description: Retrieves most recent post given a user ID
     - parameters: ```user_id``` (a valid and existing instagram user ID, type: string/integer)
-    - returns: ```[post_page, post_pic]``` (links to 1) the page of the most recent post and 2) the picture, type: list of strings)
+    - parameters: ```download``` (wether or not newest post should be downloaded, type: boolean, default: False)
+    - returns: ```[post_page, post_pic(s)]``` (links to 1) the page of the most recent post and 2) the picture(s), type: list of strings)
+  - #### getNewIGTV(user_id, download = False)
+    - description: Retrieves most recent IGTV post given a user ID
+    - parameters: ```user_id``` (a valid and existing instagram user ID, type: string/integer)
+    - parameters: ```download``` (wether or not newest IGTV post should be downloaded, type: boolean, default: False)
+    - returns: ```[igtv_nr, post_page, post_pic(s)]``` (1) Number IGTV posts, links to 2) the page of the most recent post and 3) the picture(s), type: list of strings)
+  - #### getTagged(user_id)
+    - description: Retrieves the URL to the user's tagged posts
+    - parameters: ```user_id``` (a valid and existing instagram user ID, type: string/integer)
+    - returns: ```tagged_page``` (link to user's tagged page, type: string)
   - #### isPrivate(instagram_post_url)
     - description: Retrieves private status given an URL to an instagram post
     - parameters: ```instagram_post_url``` (a valid link to an existing instagram post, type: string)
@@ -40,6 +81,10 @@ A small python package to access and deal with Instagram data!
     - description: Retrieves private status of an instagram profile given a user ID
     - parameters: ```user_id``` (a valid and existing instagram user ID, type: string/integer)
     - returns: True/False (status, type: boolean)
+  - #### getPostDetails(instagram_post_url)
+    - description: Retrieves post details via the Instagram API
+    - parameters: ```instagram_post_url``` (a valid link to an existing instagram post, type: string)
+    - returns: ```[url, post_data, post_json]``` (a list containing 1) URL to the retrieved page, type: string; 2) the json data in string format, type: string; 3) the json data as a json object, type: json)
   - #### getMedia(instagram_post_url, download)
     - description: Retrieves download links to media given an instagram post URL
     - parameters: ```instagram_post_url``` (a valid link to an existing instagram post, type: string)
@@ -70,7 +115,11 @@ A small python package to access and deal with Instagram data!
   - #### isPrivate(instagram_post_url)
     - description: Retrieves private status given an URL to an instagram post
     - parameters: ```instagram_post_url``` (a valid link to an existing instagram post, type: string)
-    - returns: True/False (status, type: boolean)  
+    - returns: True/False (status, type: boolean)
+  - #### multiload(file_name)
+    - description: Download multiple posts via a file containing links (see [Example](https://raw.githubusercontent.com/t0xic-m/instagram_downloader/master/links.txt))
+    - parameters: ```file_name``` (filename or path to file that contains the links, type: string)
+    - returns: NULL
 
 - ### InstaBot
 
@@ -84,11 +133,13 @@ A small python package to access and deal with Instagram data!
     - ```channel``` (a telegram channel name or ID, type: string)
     - ```api_token``` (telegram bot api token, type: string)
 
-  - #### instaBot(user_ids, rtime, stime)
+  - #### instaBot(user_ids, rtime, stime, daily = False, debugging_mode = True)
     - description: A bot that watches instagram profiles and sends notifications to a telegram channel
     - parameters: ```user_ids``` (a list of valid and existing user IDs, type: list of strings/integers)
     - parameters: ```rtime``` (time in seconds that specifies how long the bot should run, if set to 0 it will run forever, type: integer, default: 3480)
     - parameters: ```stime``` (time in hours that specifies when story alerts should be sent, type: integer, default: 21)
+    - parameters: ```daily``` (if stories should be sent daily or every 12 hours, type: boolean, default: False - Stories are sent every 12 hours)
+    - parameters: ```debugging_mode``` (if control and status messages should be sent to the telegram channel, type: boolean, default: True)
     - returns: NULL
 
 - ### InstaView
