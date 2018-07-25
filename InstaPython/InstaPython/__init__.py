@@ -1137,6 +1137,7 @@ class InstaPythonApp:
 		api_token = input("Enter a Telegram bot API token:\n")
 		rtime = input("Enter how long the bot should run in seconds (0 if bot should run infinitely):\n")
 		stime = input("Enter the hour when story notifications should be sent:\n")
+		daily = input("Enter if story notifications should be sent in a 12 hour interval: True/False\n")
 		debugging_mode = input("Enter if debugging mode should be activated: True/False\n")
 		user_ids = []
 		while True:
@@ -1147,9 +1148,15 @@ class InstaPythonApp:
 				break
 		i = InstaBot("instabot.cfg", channel, api_token)
 		if debugging_mode == "True":
-			i.instaBot(user_ids, rtime, stime, True)
+			if daily == "True":
+				i.instaBot(user_ids, rtime, stime, False, True)
+			else:
+				i.instaBot(user_ids, rtime, stime, True, True)
 		else:
-			i.instaBot(user_ids, rtime, stime, False)
+			if daily == "True":
+				i.instaBot(user_ids, rtime, stime, False, False)
+			else:
+				i.instaBot(user_ids, rtime, stime, True, False)
 
 	def instaview(self):
 		f_query = "Query: InstaView\n"
