@@ -176,9 +176,9 @@ import os
 ```
 
 These packages usually have to be installed (not included in the standard installation):
-- lxml
-- tkinter
-- requests
+- lxml (```pip install lxml```)
+- requests (```pip install requests```)
+- tkinter (varies depending on OS)
 
 ## License
 
