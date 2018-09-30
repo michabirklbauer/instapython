@@ -295,16 +295,20 @@ class InstaLoad:
 			image = tree.xpath('//meta[@property="og:image"]/@content')
 			try:
 				ur.urlretrieve(str(image[0]), str(image[0]).split("/")[-1].split("?")[0])
+				return 0
 			except:
 				error_msg = "Error in link: " + insta_url
 				print(error_msg)
+				return 1
 		elif str(json_data["entry_data"]["PostPage"][0]["graphql"]["shortcode_media"]["__typename"]) == "GraphVideo":
 			video = tree.xpath('//meta[@property="og:video:secure_url"]/@content')
 			try:
 				ur.urlretrieve(str(video[0]), str(video[0]).split("/")[-1].split("?")[0])
+				return 0
 			except:
 				error_msg = "Error in link: " + insta_url
 				print(error_msg)
+				return 1
 		elif str(json_data["entry_data"]["PostPage"][0]["graphql"]["shortcode_media"]["__typename"]) == "GraphSidecar":
 			prefix = str(json_data["entry_data"]["PostPage"][0]["graphql"]["shortcode_media"]["shortcode"])
 			edges = json_data["entry_data"]["PostPage"][0]["graphql"]["shortcode_media"]["edge_sidecar_to_children"]["edges"]
@@ -313,18 +317,23 @@ class InstaLoad:
 					url = str(edge["node"]["video_url"])
 					try:
 						ur.urlretrieve(url, prefix+"_"+(url.split("/")[-1].split("?")[0]))
+						return 0
 					except:
 						error_msg = "Error in link: " + insta_url
 						print(error_msg)
+						return 1
 				else:
 					url = str(edge["node"]["display_url"])
 					try:
 						ur.urlretrieve(url, prefix+"_"+(url.split("/")[-1].split("?")[0]))
+						return 0
 					except:
 						error_msg = "Error in link: " + insta_url
 						print(error_msg)
+						return 1
 		else:
 			print("Unrecognized typename!")
+			return 1
 
 	def is_private(self, link):
 		url = str(link)
@@ -335,6 +344,8 @@ class InstaLoad:
 			return False
 
 	def multiload(self, file_name):
+		multiload_warnings = 0
+		multiload_errors = 0
 		if os.path.isfile(file_name):
 			with open(file_name, "r") as in_file:
 				lines = in_file.readlines()
@@ -345,6 +356,7 @@ class InstaLoad:
 			for line in lines:
 				l = line.lstrip().rstrip()
 				if self.is_private(l):
+					multiload_warnings = multiload_warnings + 1
 					print("It appears your link list also contains links to private posts, script will try to download anyway but manually checking is advised! Private links will be filtered and appended to private.txt!")
 					try:
 						self.instaload(l)
@@ -354,7 +366,11 @@ class InstaLoad:
 						p_file.write(l+"\n")
 						p_file.close()
 				else:
-					self.instaload(l)
+					multiload_result = self.instaload(l)
+				if multiload_result == 0:
+					pass
+				else:
+					multiload_errors = multiload_errors + 1
 				status = counter/count
 				status_bar = ""
 				if status == 1:
@@ -402,6 +418,11 @@ class InstaLoad:
 				status_msg = "Downloaded " + str(line) + "\nDownload at " + str(status*100) + "%\n" + status_bar + "\n"
 				counter = counter + 1
 				print(status_msg)
+			w = "Warnings: " + multiload_warnings + "\n"
+			e = "Errors: " + multiload_errors + "\n"
+			print("Download completed!\n")
+			print(w)
+			print(e)
 		else:
 			print("File doesn't exist! Please provide a valid filename/path to file!")
 
