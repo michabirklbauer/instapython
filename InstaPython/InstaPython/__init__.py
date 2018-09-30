@@ -418,8 +418,8 @@ class InstaLoad:
 				status_msg = "Downloaded " + str(line) + "\nDownload at " + str(status*100) + "%\n" + status_bar + "\n"
 				counter = counter + 1
 				print(status_msg)
-			w = "Warnings: " + multiload_warnings + "\n"
-			e = "Errors: " + multiload_errors + "\n"
+			w = "Warnings: " + str(multiload_warnings) + "\n"
+			e = "Errors: " + str(multiload_errors) + "\n"
 			print("Download completed!\n")
 			print(w)
 			print(e)
