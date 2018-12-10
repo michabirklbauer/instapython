@@ -5,6 +5,8 @@ A small python package to access and deal with Instagram data!
 ## WARNING
 **\[10.12.2018\] Since Instagram deprecated their public API this repository will not be maintained anymore. Programs/Scripts or parts of them will not work properly anymore! USE AT OWN RISK!**
 
+Read more here: [https://t0xic-m.github.io/web/instapython.html](https://t0xic-m.github.io/web/instapython.html)
+
 ## Screenshot
 
 ![Screenshot](https://raw.githubusercontent.com/t0xic-m/instapython/master/docs/instapython.jpg)
