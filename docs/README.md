@@ -40,6 +40,6 @@ Read the ReadMe [here](https://github.com/t0xic-m/instapython/blob/master/README
 
 ## Contact
 
-- Website: [Web](https://sites/google.com/site/michabirklbauer)
+- Website: [Web](https://t0xic-m.github.io/web)
 - Website: [GitHub](https://t0xic-m.github.io)
-- Mail: micha.birklbauer@gmail.com
+- Contact: [Mail](mailto:micha.birklbauer@gmail.com)
