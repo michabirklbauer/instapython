@@ -186,6 +186,6 @@ These packages usually have to be installed (not included in the standard instal
 
 ## Contact
 
-- Website: [Web](https://sites/google.com/site/michabirklbauer)
+- Website: [Web](https://t0xic-m.github.io/web)
 - Website: [GitHub](https://t0xic-m.github.io)
-- Mail: micha.birklbauer@gmail.com
+- Contact: [mail](mailto:micha.birklbauer@gmail.com)
