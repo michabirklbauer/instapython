@@ -188,4 +188,4 @@ These packages usually have to be installed (not included in the standard instal
 
 - Website: [Web](https://t0xic-m.github.io/web)
 - Website: [GitHub](https://t0xic-m.github.io)
-- Contact: [mail](mailto:micha.birklbauer@gmail.com)
+- Contact: [Mail](mailto:micha.birklbauer@gmail.com)
