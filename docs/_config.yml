@@ -1,8 +1,8 @@
 theme: jekyll-theme-minimal
 title: "InstaPython by Micha Birklbauer"
 description: "Project Website for InstaPython - A Python Package for using Instagram"
-logo: https://raw.githubusercontent.com/t0xic-m/t0xic-m.github.io/master/avatar.jpg
+logo: https://raw.githubusercontent.com/michabirklbauer/projects/master/avatar.jpg
 show_downloads: "true"
 github:
-  zip_url: https://github.com/t0xic-m/instapython/archive/master.zip
-  tar_url: https://github.com/t0xic-m/instapython/archive/master.tar.gz
+  zip_url: https://github.com/michabirklbauer/instapython/archive/master.zip
+  tar_url: https://github.com/michabirklbauer/instapython/archive/master.tar.gz

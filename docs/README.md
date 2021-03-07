@@ -1,22 +1,21 @@
 # InstaPython
 
-A small python package to access and deal with Instagram data!
+A small python package to access and deal with Instagram data.
 
 ## WARNING
-**\[10.12.2018\] Since Instagram deprecated their public API this repository will not be maintained anymore. Programs/Scripts or parts of them will not work properly anymore! USE AT OWN RISK!**
 
-Read more here: [https://t0xic-m.github.io/web/instapython.html](https://t0xic-m.github.io/web/instapython.html)
+**\[10.12.2018\] Since Instagram deprecated their public API this repository will not be maintained anymore. Programs/Scripts or parts of them will not work properly anymore! USE AT OWN RISK!**
 
 ## Screenshot
 
-![Screenshot](https://raw.githubusercontent.com/t0xic-m/instapython/master/docs/instapython.jpg)
+![Screenshot](https://raw.githubusercontent.com/michabirklbauer/instapython/master/docs/instapython.jpg)
 
 ## Quick Start
 
 Installation:
 
 ```bash
-pip install Release/InstaPython-1.1.0.tar.gz
+pip install Release/InstaPython-1.1.1.tar.gz
 ```
 
 Import and Usage:
@@ -30,23 +29,22 @@ instagram.getUserID("katie_kosova")
 
 ## Classes and Functions
 
-Read the ReadMe [here](https://github.com/t0xic-m/instapython/blob/master/README.md)!
+Read the ReadMe [here](https://github.com/michabirklbauer/instapython/blob/master/README.md)!
 
 ## Download
 
 - Package:
-  - [TAR.GZ](https://github.com/t0xic-m/instapython/raw/master/Release/InstaPython-1.1.0.tar.gz)
-  - [WHL](https://github.com/t0xic-m/instapython/raw/master/Release/InstaPython-1.1.0-py3-none-any.whl)
+  - [TAR.GZ](https://github.com/michabirklbauer/instapython/raw/master/Release/InstaPython-1.1.0.tar.gz)
+  - [WHL](https://github.com/michabirklbauer/instapython/raw/master/Release/InstaPython-1.1.0-py3-none-any.whl)
 - Repository:
-  - [TAR.GZ](https://github.com/t0xic-m/instapython/archive/master.tar.gz)
-  - [ZIP](https://github.com/t0xic-m/instapython/archive/master.zip)
+  - [TAR.GZ](https://github.com/michabirklbauer/instapython/archive/master.tar.gz)
+  - [ZIP](https://github.com/michabirklbauer/instapython/archive/master.zip)
 
 ## License
 
-[MIT License](https://github.com/t0xic-m/instapython/blob/master/LICENSE.md)
+[MIT License](https://github.com/michabirklbauer/instapython/blob/master/LICENSE.md)
 
 ## Contact
 
-- Website: [Web](https://t0xic-m.github.io/web)
-- Website: [GitHub](https://t0xic-m.github.io)
-- Contact: [Mail](mailto:micha.birklbauer@gmail.com)
+- Website: [michabirklbauer.github.io](https://michabirklbauer.github.io/)
+- Contact: [micha.birklbauer@gmail.com](mailto:micha.birklbauer@gmail.com)

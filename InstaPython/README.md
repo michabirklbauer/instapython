@@ -1,13 +1,17 @@
 # InstaPython
 
-A small python package to access and deal with Instagram data!
+A small python package to access and deal with Instagram data.
+
+## WARNING
+
+**\[10.12.2018\] Since Instagram deprecated their public API this package will not be maintained anymore. Programs/Scripts or parts of them will not work properly anymore! USE AT OWN RISK!**
 
 ## Quick Start
 
 Installation:
 
 ```bash
-pip install Release/InstaPython-1.1.0.tar.gz
+pip install Release/InstaPython-1.1.1.tar.gz
 ```
 
 Import and Usage:
@@ -37,8 +41,8 @@ instagram.getUserID("katie_kosova")
 - ### Instagram
 
   Main Repositories:
-  - [Instagram_Downloader](https://github.com/t0xic-m/instagram_downloader)
-  - [Instagram_Story_Downloader](https://github.com/t0xic-m/instagram_story_downloader)
+  - [**instagram_downloader**](https://github.com/michabirklbauer/instagram_downloader)
+  - [**instagram_story_downloader**](https://github.com/michabirklbauer/instagram_story_downloader)
 
   Basic utility functions:
 
@@ -104,7 +108,7 @@ instagram.getUserID("katie_kosova")
 - ### InstaLoad
 
   Main Repository:
-  - [Instagram_Downloader](https://github.com/t0xic-m/instagram_downloader)
+  - [**instagram_downloader**](https://github.com/michabirklbauer/instagram_downloader)
 
   Download media functions:
 
@@ -117,14 +121,14 @@ instagram.getUserID("katie_kosova")
     - parameters: ```instagram_post_url``` (a valid link to an existing instagram post, type: string)
     - returns: True/False (status, type: boolean)
   - #### multiload(file_name)
-    - description: Download multiple posts via a file containing links (see [Example](https://raw.githubusercontent.com/t0xic-m/instagram_downloader/master/links.txt))
+    - description: Download multiple posts via a file containing links (see [Example](https://raw.githubusercontent.com/michabirklbauer/instagram_downloader/master/links.txt))
     - parameters: ```file_name``` (filename or path to file that contains the links, type: string)
     - returns: NULL
 
 - ### InstaBot
 
   Main Repository:
-  - [Instagram_Watchdog](https://github.com/t0xic-m/instagram_watchdog)
+  - [**instagram_watchdog**](https://github.com/michabirklbauer/instagram_watchdog)
 
   Watchdog functions:
 
@@ -145,7 +149,7 @@ instagram.getUserID("katie_kosova")
 - ### InstaView
 
   Main Repository:
-  - [Instagram_Data_Download_Viewer](https://github.com/t0xic-m/instagram_data_download_viewer)
+  - [**instagram_json_viewer**](https://github.com/michabirklbauer/instagram_json_viewer)
 
   Viewer functions:
 
@@ -156,10 +160,9 @@ instagram.getUserID("katie_kosova")
 
 ## License
 
-[MIT License](https://github.com/t0xic-m/instapython/blob/master/LICENSE.md)
+[MIT License](https://github.com/michabirklbauer/instapython/blob/master/LICENSE.md)
 
 ## Contact
 
-- Website: [Web](https://sites/google.com/site/michabirklbauer)
-- Website: [GitHub](https://t0xic-m.github.io)
-- Mail: micha.birklbauer@gmail.com
+- Website: [michabirklbauer.github.io](https://michabirklbauer.github.io/)
+- Contact: [micha.birklbauer@gmail.com](mailto:micha.birklbauer@gmail.com)
